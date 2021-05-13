@@ -9,7 +9,28 @@ module.exports = {
   output:{
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'images/[hash][ext][query]'
+    // assetModuleFilename: 'images/[hash][ext][query]'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use:['style-loader', 'css-loader']
+      },
+      // {
+      //   test: /\.html$/,
+      //   loader: 'html-loader',
+      // },
+      // {
+      //   test: /\.(png|jpe?g)/,
+      //   type: 'asset/resource',
+      // },
+      // {
+      //   test: /\.(js)$/,
+      //   exclude: /node_modules/,
+      //   use: ['babel-loader'],
+      // },
+    ],
   },
 
 };
