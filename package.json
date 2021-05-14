@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.common.js"
+    "start": "webpack serve --open 'Google Chrome Canary' --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "Anthony Argüello",
   "license": "ISC",
@@ -13,6 +14,8 @@
     "html-webpack-plugin": "^5.3.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   }
 }
