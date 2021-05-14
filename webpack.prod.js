@@ -10,7 +10,7 @@ module.exports = merge(common, {
   output:{
     filename: 'index.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    // assetModuleFilename: 'images/[hash][ext][query]'
+    assetModuleFilename: 'images/[hash][ext][query]'
   },
   // plugins: [
   //   new HtmlWebpackPlugin({

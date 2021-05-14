@@ -24,14 +24,14 @@ module.exports = {
         test: /\.css$/,
         use:['style-loader', 'css-loader']
       },
-      // {
-      //   test: /\.html$/,
-      //   loader: 'html-loader',
-      // },
-      // {
-      //   test: /\.(png|jpe?g)/,
-      //   type: 'asset/resource',
-      // },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+      },
+      {
+        test: /\.(png|jpe?g)/,
+        type: 'asset/resource',
+      },
       // {
       //   test: /\.(js)$/,
       //   exclude: /node_modules/,
