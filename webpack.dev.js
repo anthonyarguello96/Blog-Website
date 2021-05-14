@@ -6,7 +6,7 @@ const {merge} = require('webpack-merge');
 module.exports = merge(common, {
   devtool: false,
   mode: 'development',
-  output:{
+  output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     // assetModuleFilename: 'images/[hash][ext][query]'
@@ -16,27 +16,14 @@ module.exports = merge(common, {
       // filename: 'index.html',
       template: 'src/index.html',
       minify: false,
-    })
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use:['style-loader', 'css-loader']
-      }
-  //     // {
-  //     //   test: /\.html$/,
-  //     //   loader: 'html-loader',
-  //     // },
-  //     // {
-  //     //   test: /\.(png|jpe?g)/,
-  //     //   type: 'asset/resource',
-  //     // },
-  //     // {
-  //     //   test: /\.(js)$/,
-  //     //   exclude: /node_modules/,
-  //     //   use: ['babel-loader'],
-  //     // },
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
 

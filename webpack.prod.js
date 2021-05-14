@@ -10,58 +10,40 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = merge(common, {
   devtool: false,
   mode: 'production',
-  output:{
+  output: {
     filename: 'index.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'images/[hash][ext][query]'
+    assetModuleFilename: 'images/[hash][ext][query]',
   },
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(
-      {
-        filename:"[name].[contenthash].css"
-      }
-    )
-  //   new HtmlWebpackPlugin({
-  //     filename: 'index.html',
-  //     template: 'src/index.html',
-  //     minify: false,
-  //   })
+        {
+          filename: '[name].[contenthash].css',
+        },
+    ),
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use:[MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
-  //     // {
-  //     //   test: /\.html$/,
-  //     //   loader: 'html-loader',
-  //     // },
-  //     // {
-  //     //   test: /\.(png|jpe?g)/,
-  //     //   type: 'asset/resource',
-  //     // },
-  //     // {
-  //     //   test: /\.(js)$/,
-  //     //   exclude: /node_modules/,
-  //     //   use: ['babel-loader'],
-  //     // },
     ],
   },
-  optimization:{
+  optimization: {
     minimizer: [
       new CssMinimizerPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html',
-        minify:{
+        minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
-          removeComments: true
-        }
-      })
-    ]
-  }
+          removeComments: true,
+        },
+      }),
+    ],
+  },
 
 });
