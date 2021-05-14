@@ -11,19 +11,19 @@ module.exports = {
   //   path: path.resolve(__dirname, 'dist'),
   //   // assetModuleFilename: 'images/[hash][ext][query]'
   // },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html',
-      minify: false,
-    })
-  ],
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     filename: 'index.html',
+  //     template: 'src/index.html',
+  //     minify: false,
+  //   })
+  // ],
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use:['style-loader', 'css-loader']
-      },
+      // {
+      //   test: /\.css$/,
+      //   use:['style-loader', 'css-loader']
+      // },
       {
         test: /\.html$/,
         loader: 'html-loader',

@@ -2,7 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require('./webpack.common');
 const {merge} = require('webpack-merge');
-
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(common, {
   devtool: false,
@@ -12,19 +15,25 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'images/[hash][ext][query]'
   },
-  // plugins: [
+  plugins: [
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(
+      {
+        filename:"[name].[contenthash].css"
+      }
+    )
   //   new HtmlWebpackPlugin({
   //     filename: 'index.html',
   //     template: 'src/index.html',
   //     minify: false,
   //   })
-  // ],
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.css$/,
-  //       use:['style-loader', 'css-loader']
-  //     },
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use:[MiniCssExtractPlugin.loader, 'css-loader']
+      },
   //     // {
   //     //   test: /\.html$/,
   //     //   loader: 'html-loader',
@@ -38,7 +47,21 @@ module.exports = merge(common, {
   //     //   exclude: /node_modules/,
   //     //   use: ['babel-loader'],
   //     // },
-  //   ],
-  // },
+    ],
+  },
+  optimization:{
+    minimizer: [
+      new CssMinimizerPlugin(),
+      new TerserPlugin(),
+      new HtmlWebpackPlugin({
+        template: './src/index.html',
+        minify:{
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      })
+    ]
+  }
 
 });

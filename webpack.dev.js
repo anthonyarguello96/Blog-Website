@@ -11,19 +11,19 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'dist'),
     // assetModuleFilename: 'images/[hash][ext][query]'
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     filename: 'index.html',
-  //     template: 'src/index.html',
-  //     minify: false,
-  //   })
-  // ],
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.css$/,
-  //       use:['style-loader', 'css-loader']
-  //     },
+  plugins: [
+    new HtmlWebpackPlugin({
+      // filename: 'index.html',
+      template: 'src/index.html',
+      minify: false,
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use:['style-loader', 'css-loader']
+      }
   //     // {
   //     //   test: /\.html$/,
   //     //   loader: 'html-loader',
@@ -37,7 +37,7 @@ module.exports = merge(common, {
   //     //   exclude: /node_modules/,
   //     //   use: ['babel-loader'],
   //     // },
-  //   ],
-  // },
+    ],
+  },
 
 });
