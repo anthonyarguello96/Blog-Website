@@ -2,7 +2,7 @@
   --header-height: 3rem;
 
   /* colors */
-  --first-coplor: #3664f4;
+  --first-color: #3664f4;
   --dark-color: #070d1f;
   --dark-color-alt: #282b3a;
   --white-color: #e6e7e9;
@@ -109,4 +109,82 @@ img{
       z-index: var(--z-fixed);
       transition: .5s;
     }
+  }
+
+
+  .nav__content{
+    height: 100%;
+    grid-auto-rows: max-content 1fr max-content;
+    row-gap: 2rem;
+  }
+
+
+  .nav__close{
+    position: absolute;
+    right: 1.5rem;
+    font-size: 1.3rem;
+    padding: .25rem;
+    background-color: var(--dark-color-alt);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+
+  .nav__img{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: .25rem;
+    margin-bottom: .8rem;
+    width: 50px;
+    height: 50px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: .8rem;
+  }
+
+
+  .nav__img img{
+    width: 46px;
+  }
+
+
+  .nav__name{
+    display: block;
+    color: var(--white-color);
+  }
+
+
+  .nav__profession{
+    font-size: var(--small-font-size);
+  }
+
+  .nav__menu{
+    align-self:baseline;
+  }
+
+
+  .nav__item{
+    margin: 2.5rem 0;
+  }
+
+
+  .nav__link{
+    color: var(--white-color);
+  }
+
+  .nav__social{
+
+  }
+
+
+  .nav__social-icon{
+    font-size: 1.2rem;
+    color: var(--white-color);
+    margin-right: 1rem;
+  }
+
+
+  .nav__social-icon:hover{
+    color: var(--first-color);
   }
