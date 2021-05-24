@@ -3,14 +3,52 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Anthony's Blog</title>
 </head>
 <body>
-  <h1>Hellow World!</h1>
-  <div class="img__box">
-      <img src="./assets/img-1.png" alt="placeholder img">
-  </div>
+  <!-- Navr Bar -->
+  <header class="header">
+    <a href="#" class="header__logo">Thony's Blog</a>
+    <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
 
+  <!-- NAV BAR   -->
+  <nav class="nav" id="nav-menu">
+    <div class="nav__content bd-grid">
+      <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+      <!-- NAV PROFILE -->
+      <div class="nav__profile">
+        <div class="nav__img">
+          <img src="./assets/profile-photo.png" alt="#">
+        </div>
+          <div>
+            <a href="#" class="nav__name">Anthony A.</a>
+            <span class="nav__profession">Web Designer</span>
+          </div>
+        </div>
+        <!-- NAV MENU -->
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">About<a href="" class="nav__link"></a></li>
+            <li class="nav__item">Blog<a href="" class="nav__link"></a></li>
+            <li class="nav__item">Contact<a href="" class="nav__link"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav__social">
+        <a href="#" class="nav__social-ico"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="#" class="nav__social-ico"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="#" class="nav__social-ico"><ion-icon name="logo-instagram"></ion-icon></a>
+      </div>
+  </nav>
+  </header>
+<!-- //Main -->
+<main class="main">
+</main>
+<!-- Footer -->
+<footer>
+</footer>
+<!-- ionicons -->
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   <!-- <script type="text/javascript" src="../dist/index.js"></script> -->
 </body>
 </html>
