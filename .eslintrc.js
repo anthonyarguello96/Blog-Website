@@ -15,5 +15,6 @@ module.exports = {
     'require-jsdoc': 0,
     'new-cap': 0,
     'no-unused-vars': 1,
+    'no-invalid-this': 1,
   },
 };

@@ -100,7 +100,7 @@ img{
     .nav{
       position: fixed;
       top: 0;
-      left: 0;
+      left: -100%;
       background-color: var(--dark-color);
       color:var(--white-color);
       width: 100%;
@@ -188,3 +188,22 @@ img{
   .nav__social-icon:hover{
     color: var(--first-color);
   }
+
+
+/* Show Menu */
+.show{
+  left:0;
+}
+
+
+/* Active Menu */
+.active{
+  color: var(--first-color);
+}
+
+
+.log__box{
+  display: flex;
+  align-items: center;
+  margin: .5rem 0
+}
