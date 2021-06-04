@@ -29,9 +29,9 @@
         <!-- NAV MENU -->
         <div class="nav__menu">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link active">About</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="#about-section" class="nav__link active">About</a></li>
+            <li class="nav__item"><a href="#blog-posts" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
         </div>
         <div class="nav__social">
@@ -49,7 +49,7 @@
   <a class="hero__button" href="#0">READ NOW</a>
 </div>
 <!-- ABOUT SECTION -->
-<div class="about">
+<div class="about" id="about-section">
   <h2 class="section__title">About</h2>
     <div class="about__container">
       <div class="about__img-container">
@@ -80,7 +80,7 @@
   </iframe>
 </div>
 <!-- Blog Entries -->
-<div class="blog">
+<div class="blog" id= "blog-posts">
   <h2 class="section__title">Blog Post</h2>
   <div class="blog__container">
     <div class="blog__entry">
@@ -110,7 +110,7 @@
         ligula diam lobortis augue.
       </p>
     </div>
-    <div class="blog__entry">
+    <!-- <div class="blog__entry">
       <img src="./assets/place-holder.png" alt="" class="blog__entry-img">
       <h2>Item #</h2>
       <p>
@@ -118,9 +118,18 @@
         magna non convallis vestibulum, felis lacus dictum nulla, eget egestas
         ligula diam lobortis augue.
       </p>
-    </div>
+    </div> -->
   </div>
 </div>
+<form action="" id="contact" class="contact__form">
+  <div class="contact__inputs">
+    <h2>Contact Me</h2>
+    <input type="text" class="contact__input">
+    <input type="mail" class="contact__input">
+  </div>
+  <textarea name="name" rows="10" cols="0"></textarea>
+  <input type="submit" value="Submit" class="contact__submit-btn">
+</form>
 </main>
 <!-- Footer -->
 <footer>
